@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main    # or master, whichever your default branch is
+
+media_folder: "static/uploads"   # where CMS will store uploaded images
+public_folder: "/uploads"
+
+collections:
+  - name: "parks"
+    label: "Parks"
+    folder: "src/parks"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Park Name", widget: "string" }
+      - { name: "Description", label: "Description", widget: "text" }
+      - { name: "Photo1", label: "Primary Photo", widget: "image" }
+      - { name: "Photo2", label: "Photo 2", widget: "image", required: false }
+      - { name: "Photo3", label: "Photo 3", widget: "image", required: false }
+      - { name: "Photo4", label: "Photo 4", widget: "image", required: false }
+      - { name: "Photo5", label: "Photo 5", widget: "image", required: false }
+      - { name: "Photo6", label: "Photo 6", widget: "image", required: false }
