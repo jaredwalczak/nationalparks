@@ -1,0 +1,9 @@
+---
+layout: layout.njk
+---
+<h1>US National Parks</h1>
+<ul>
+  {% for park in collections.parks %}
+    <li><a href="{{ park.url }}">{{ park.data.title }}</a></li>
+  {% endfor %}
+</ul>
